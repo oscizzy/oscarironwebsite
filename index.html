@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Iron - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Header Banner -->
+    <div class="header-banner">
+        <p>🚚 Free Shipping on Orders Over $100 | ⚡ 24/7 Customer Support</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Oscar Iron</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link active">Home</a></li>
+                <li><a href="supplements.html" class="nav-link">Supplements</a></li>
+                <li><a href="equipment.html" class="nav-link">Equipment</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="cart.html" class="nav-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Oscar Iron</h1>
+                    <p class="hero-subtitle">Transform Your Body, Dominate Your Goals</p>
+                    <p class="hero-description">Premium supplements and equipment for serious athletes</p>
+                    <div class="hero-buttons">
+                        <a class="btn btn-primary" href="supplements.html">Shop Supplements</a>
+                        <a class="btn btn-secondary" href="equipment.html">Shop Equipment</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-placeholder">💪</div>
+                </div>
+            </section>
+
+            <!-- Featured Products Section -->
+            <section class="featured-products">
+                <div class="section-divider"></div>
+                <h2>Featured Products</h2>
+                <p class="section-subtitle">Premium selections from our bestsellers</p>
+                <div class="products-grid" id="featuredProductsGrid">
+                    <!-- Dynamically populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Why Oscar Iron Section -->
+            <section class="features">
+                <div class="features-container">
+                    <h2>Why Choose Oscar Iron?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🏆</div>
+                            <h3>Premium Quality</h3>
+                            <p>Only the finest supplements and equipment for maximum results</p>
+                            <div class="feature-bar"></div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Fast Shipping</h3>
+                            <p>Quick delivery to get your gear when you need it</p>
+                            <div class="feature-bar"></div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💯</div>
+                            <h3>Guaranteed Quality</h3>
+                            <p>100% authentic products backed by customer guarantee</p>
+                            <div class="feature-bar"></div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔒</div>
+                            <h3>Secure Payment</h3>
+                            <p>Protected transactions with encrypted checkout</p>
+                            <div class="feature-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter-section">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Get exclusive deals and fitness tips delivered to your inbox</p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Oscar Iron</h4>
+                <p>Your trusted source for premium gym supplements and equipment</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="YouTube">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="supplements.html">Supplements</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Oscar Iron. All rights reserved. | Dominate Your Goals 💪</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal (for detailed view) -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Page-specific boot: ensure the correct content is rendered and cart count updated
+        if (typeof renderHomePage === 'function') renderHomePage();
+        if (typeof updateCartCount === 'function') updateCartCount();
+    </script>
+</body>
+</html>
+                <button class="filter-btn" data-filter="gloves">Gloves</button>
+                <button class="filter-btn" data-filter="belts">Belts</button>
+                <button class="filter-btn" data-filter="shorts">Shorts</button>
+                <button class="filter-btn" data-filter="shirts">Shirts</button>
+            </div>
+
+            <div class="products-grid" id="equipmentGrid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Shopping Cart Page -->
+        <section id="cart" class="page">
+            <div class="page-header">
+                <h1>Shopping Cart</h1>
+            </div>
+            
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+                    <!-- Dynamically populated by JavaScript -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping:</span>
+                        <span id="shipping">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">$0.00</span>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Oscar Iron</h4>
+                <p>Your trusted source for premium gym supplements and equipment</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="YouTube">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+                    <li><a href="#supplements" onclick="navigateTo('supplements')">Supplements</a></li>
+                    <li><a href="#equipment" onclick="navigateTo('equipment')">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Oscar Iron. All rights reserved. | Dominate Your Goals 💪</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal (for detailed view) -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

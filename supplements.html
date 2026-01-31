@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Iron - Supplements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Header Banner -->
+    <div class="header-banner">
+        <p>🚚 Free Shipping on Orders Over $100 | ⚡ 24/7 Customer Support</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Oscar Iron</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="supplements.html" class="nav-link active">Supplements</a></li>
+                <li><a href="equipment.html" class="nav-link">Equipment</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="cart.html" class="nav-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Supplements Page -->
+        <section id="supplements" class="page active">
+            <div class="page-header">
+                <h1>Supplements</h1>
+                <p>Build muscle, recover faster, perform better</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="protein">Protein</button>
+                <button class="filter-btn" data-filter="creatine">Creatine</button>
+                <button class="filter-btn" data-filter="preworkout">Pre-Workout</button>
+                <button class="filter-btn" data-filter="gainer">Mass Gainers</button>
+            </div>
+
+            <div class="products-grid" id="supplementsGrid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Hidden placeholders (prevent script errors from missing elements) -->
+    <div style="display:none;">
+        <div id="featuredProductsGrid"></div>
+        <div id="equipmentGrid"></div>
+        <div id="cartItems"></div>
+        <span id="subtotal"></span>
+        <span id="shipping"></span>
+        <span id="total"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Oscar Iron</h4>
+                <p>Your trusted source for premium gym supplements and equipment</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="YouTube">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="supplements.html">Supplements</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Oscar Iron. All rights reserved. | Dominate Your Goals 💪</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal (for detailed view) -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Render supplements products and update cart count
+        if (typeof renderProducts === 'function') renderProducts(products.supplements, 'supplementsGrid');
+        if (typeof updateCartCount === 'function') updateCartCount();
+    </script>
+</body>
+</html>

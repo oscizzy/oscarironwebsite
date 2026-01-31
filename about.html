@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Iron - About</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Header Banner -->
+    <div class="header-banner">
+        <p>🚚 Free Shipping on Orders Over $100 | ⚡ 24/7 Customer Support</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Oscar Iron</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="supplements.html" class="nav-link">Supplements</a></li>
+                <li><a href="equipment.html" class="nav-link">Equipment</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="cart.html" class="nav-link cart-link">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- About Page -->
+        <section id="about" class="page active">
+            <div class="page-header">
+                <h1>About Oscar Iron</h1>
+                <p>Your Partner in Fitness Excellence</p>
+            </div>
+
+            <div class="about-container">
+                <div class="about-section">
+                    <h2>Our Mission</h2>
+                    <p>At Oscar Iron, we're dedicated to providing premium supplements and equipment to athletes who refuse to compromise on quality. We believe in powering your fitness journey with the best products available.</p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>10K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>500+</h3>
+                        <p>Premium Products</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>15+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>99%</h3>
+                        <p>Customer Satisfaction</p>
+                    </div>
+                </div>
+
+                <div class="about-values">
+                    <h2>Our Core Values</h2>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <h4>💪 Strength</h4>
+                            <p>We're committed to building strength in our community</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>🎯 Excellence</h4>
+                            <p>Every product meets the highest standards of quality</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>🤝 Community</h4>
+                            <p>Supporting athletes at every level of their journey</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>💙 Innovation</h4>
+                            <p>Constantly evolving to bring you the latest in fitness</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hidden placeholders (prevent script errors from missing elements) -->
+    <div style="display:none;">
+        <div id="featuredProductsGrid"></div>
+        <div id="supplementsGrid"></div>
+        <div id="equipmentGrid"></div>
+        <div id="cartItems"></div>
+        <span id="subtotal"></span>
+        <span id="shipping"></span>
+        <span id="total"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Oscar Iron</h4>
+                <p>Your trusted source for premium gym supplements and equipment</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" title="Facebook">f</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="YouTube">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="supplements.html">Supplements</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Oscar Iron. All rights reserved. | Dominate Your Goals 💪</p>
+        </div>
+    </footer>
+
+    <!-- Product Modal (for detailed view) -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // About page: just update cart count
+        if (typeof updateCartCount === 'function') updateCartCount();
+    </script>
+</body>
+</html>

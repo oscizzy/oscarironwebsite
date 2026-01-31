@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Iron - Premium Gym Supplements & Equipment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Header Banner -->
+    <div class="header-banner">
+        <p>🚚 Free Shipping on Orders Over $100 | ⚡ 24/7 Customer Support</p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Oscar Iron</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
+                <li><a href="#supplements" class="nav-link" data-page="supplements">Supplements</a></li>
+                <li><a href="#equipment" class="nav-link" data-page="equipment">Equipment</a></li>
+                <li><a href="#about" class="nav-link" data-page="about">About</a></li>
+                <li><a href="#cart" class="nav-link cart-link" data-page="cart">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count">0</span>
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Oscar Iron</h1>
+                    <p class="hero-subtitle">Transform Your Body, Dominate Your Goals</p>
+                    <p class="hero-description">Premium supplements and equipment for serious athletes</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="navigateTo('supplements')">Shop Supplements</button>
+                        <button class="btn btn-secondary" onclick="navigateTo('equipment')">Shop Equipment</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-placeholder">💪</div>
+                </div>
+            </section>
+
+            <!-- Featured Products Section -->
+            <section class="featured-products">
+                <div class="section-divider"></div>
+                <h2>Featured Products</h2>
+                <p class="section-subtitle">Premium selections from our bestsellers</p>
+                <div class="products-grid" id="featuredProductsGrid">
+                    <!-- Dynamically populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Why Oscar Iron Section -->
+            <section class="features">
+                <div class="features-container">
+                    <h2>Why Choose Oscar Iron?</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🏆</div>
+                            <h3>Premium Quality</h3>
+                            <p>Only the finest supplements and equipment for maximum results</p>
+                            <div class="feature-bar"></div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Fast Shipping</h3>
+                            <p>Quick delivery to get your gear when you need it</p>
+                            <div class="feature-bar"></div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💯</div>
+                            <h3>Guaranteed Quality</h3>
+                            <p>100% authentic products backed by customer guarantee</p>
+                            <div class="feature-bar"></div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔒</div>
+                            <h3>Secure Payment</h3>
+                            <p>Protected transactions with encrypted checkout</p>
+                            <div class="feature-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter-section">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Get exclusive deals and fitness tips delivered to your inbox</p>
+                    <form class="newsletter-form" onsubmit="return false;">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="page-header">
+                <h1>About Oscar Iron</h1>
+                <p>Your Partner in Fitness Excellence</p>
+            </div>
+
+            <div class="about-container">
+                <div class="about-section">
+                    <h2>Our Mission</h2>
+                    <p>At Oscar Iron, we're dedicated to providing premium supplements and equipment to athletes who refuse to compromise on quality. We believe in powering your fitness journey with the best products available.</p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>10K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>500+</h3>
+                        <p>Premium Products</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>15+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>99%</h3>
+                        <p>Customer Satisfaction</p>
+                    </div>
+                </div>
+
+                <div class="about-values">
+                    <h2>Our Core Values</h2>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <h4>💪 Strength</h4>
+                            <p>We're committed to building strength in our community</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>🎯 Excellence</h4>
+                            <p>Every product meets the highest standards of quality</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>🤝 Community</h4>
+                            <p>Supporting athletes at every level of their journey</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>💙 Innovation</h4>
+                            <p>Constantly evolving to bring you the latest in fitness</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supplements Page -->
+        <section id="supplements" class="page">
+            <div class="page-header">
+                <h1>Supplements</h1>
+                <p>Build muscle, recover faster, perform better</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="protein">Protein</button>
+                <button class="filter-btn" data-filter="creatine">Creatine</button>
+                <button class="filter-btn" data-filter="preworkout">Pre-Workout</button>
+                <button class="filter-btn" data-filter="gainer">Mass Gainers</button>
+            </div>
+
+            <div class="products-grid" id="supplementsGrid">
+                <!-- Dynamically populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Equipment Page -->
+        <section id="equipment" class="page">
+            <div class="page-header">
+                <h1>Gym Equipment</h1>
+                <p>Premium gear for serious training</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
