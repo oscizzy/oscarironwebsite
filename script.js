@@ -658,3 +658,35 @@ function proceedToCheckout() {
     }
 
 }
+// ===============================
+// API: Load products from internet
+// ===============================
+
+// New code: Fetch products from a public API and update the
+// element with id="api-status" with a simple success/failure message.
+// These comments explain only the new code below.
+fetch('https://fakestoreapi.com/products')
+    .then(response => {
+        // Check for HTTP errors
+        if (!response.ok) throw new Error('Network response was not ok');
+        return response.json();
+    })
+    .then(products => {
+        // If an element with id="api-status" exists, set its text.
+        const statusEl = document.getElementById('api-status');
+        if (statusEl) {
+            statusEl.textContent = `API connected successfully. Products loaded: ${products.length}`;
+        } else {
+            // Fallback: log to console if the element is missing
+            console.log(`API connected successfully. Products loaded: ${products.length}`);
+        }
+    })
+    .catch(() => {
+        // On any error, show a short failure message in #api-status (or console)
+        const statusEl = document.getElementById('api-status');
+        if (statusEl) {
+            statusEl.textContent = 'API failed to load.';
+        } else {
+            console.error('API failed to load.');
+        }
+    });
